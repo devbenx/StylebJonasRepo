@@ -1,0 +1,106 @@
+.MainSection{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;  
+        height: 100%;
+        border: var(--border);
+      
+        padding: var(--navheight) var(--mob-pad) 6vh var(--mob-pad);
+        position: relative;
+        width: 100%;
+        max-width: var(--max-width);
+        margin: 0 auto;
+}
+.MainSection h1{
+        text-transform: uppercase;
+        font-size: 2.5rem;
+}
+
+.ContactItem{
+        width: 3rem;
+        height: 3rem;
+        background-color: var(--clr-06);
+        align-self: center;
+        position: relative;
+        border-radius: 20px;
+        padding: 1rem 1.5rem;
+        line-height: 1;
+        background-size: 70%;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+.ContactItem:not(:last-child){
+        margin-bottom: 1rem;
+}
+.ContactItem:hover{
+        opacity: 0.85;
+}
+li:nth-child(1) .ContactItem{
+        background-image: url('../public/img/svg/whatsapp.svg');
+}
+li:nth-child(2) .ContactItem{
+        background-image: url('../public/img/svg/instagram.svg');
+}
+li:nth-child(3) .ContactItem{
+        font-family: 'Nunito Sans', sans-serif;
+        color: var(--color-white);
+        font-size: 1.3rem;
+        height: auto;
+        width: auto;
+        padding: 0.8rem 1rem;
+        align-self: center;
+}
+li:nth-child(4) .ContactItem{
+        color: var(--color-white);
+        font-size: 1.1rem;
+        height: auto;
+        width: auto;
+        padding: 0.8rem 1rem;
+}
+.MainSection ul{
+        width: min(90%, 700px);
+        padding: 0;
+}
+
+.MainSection ul li{
+        display: flex;
+        flex-direction: row;
+        flex: 1 0;
+        width: auto;
+        justify-content: space-between;
+        margin: 0 0 0.3rem;
+}
+@media (max-width: 600px) {
+        .MainSection h1{
+                font-size: 2.3rem;
+        } 
+        .ContactItem{
+                width: clamp(2.5rem, 1.6111rem + 4.4444vw, 3rem);
+                height: clamp(2.5rem, 1.6111rem + 4.4444vw, 3rem);
+                padding: 1rem clamp(1.5rem, 0.6111rem + 4.4444vw, 2rem);
+                line-height: 1;
+                background-size: 50%;
+                background-position: center;
+                background-repeat: no-repeat;     
+        } 
+        .MainSection p{
+                margin: 0 !important;
+        }   
+        .MainSection ul{
+                width: auto;
+        } 
+        .MainSection ul li p{
+                align-self: center;
+        } 
+        li:nth-child(3) .ContactItem{
+                font-size: clamp(1.02rem, 0.5222rem + 2.4889vw, 1.3rem);
+                width: auto;
+                padding: 0.6rem 0.8rem;
+        }
+        li:nth-child(4) .ContactItem{
+                font-size: clamp(1.02rem, 0.8778rem + 0.7111vw, 1.1rem);
+                width: auto;
+                padding: 0.6rem 0.8rem;
+        }
+}

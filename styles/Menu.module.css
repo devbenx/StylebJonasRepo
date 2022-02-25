@@ -1,0 +1,70 @@
+.services_list_display{
+        display: flex;
+        flex-direction: column;
+}
+.button_menu{
+        display: flex;
+        width: fit-content;
+        margin: auto;
+        text-transform: uppercase;
+    
+        color: var(--color-white);
+        text-decoration: none;
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.02rem;
+        border-radius: 980px;
+        padding: 2rem 2.5rem;
+        background: var(--clr-06);
+        text-align: center;
+        cursor: pointer;
+        border: var(--border-card);
+        margin: 1.3rem auto 0;
+}
+.ListPrices:not(:first-child){
+        /* padding-left: 2rem; */
+}
+.ListPrices{
+        display: flex;
+        scroll-snap-align: start;
+        flex: 1 0 18rem;
+        flex-direction: column;
+        height: auto;
+}
+.ListPrices h1{
+        font-family: 'Outfit', sans-serif;
+        font-size: clamp(1rem, 0.8680rem + 0.4800vw, 1.15rem);
+        /* font-style: italic; */
+        line-height: 1;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.9);
+        padding: 0;
+        margin: 0 0 0.8rem -8px;
+        text-align: left;
+}
+.ListPrices h3{
+        color: rgba(255, 255, 255, 0.9);
+        font-family: 'Outfit', sans-serif;
+        font-size: clamp(1rem, 0.8680rem + 0.4800vw, 1.15rem);
+        line-height: 0.1;
+        font-weight: 300;
+        letter-spacing: 0px;
+        text-transform: none;
+}
+.ListPrices p{
+        color: rgba(255, 255, 255, 0.9);
+        font-size: clamp(1rem, 0.8680rem + 0.4800vw, 1.15rem);
+        font-style: italic !important;
+        margin-bottom: 1rem;
+        line-height: 1;
+        white-space: pre-line;
+}
+.ListPrices:not(:last-child){
+        margin: 0;
+}
+.line{
+        margin: 0.7rem 1rem 0 0;
+        height: 1.5px;
+        width: 6rem;
+        background-color: rgba(255, 255, 255, 0.8);
+        align-self: center;
+}

@@ -1,0 +1,161 @@
+/* Navigation Bar */
+.NavigationBar__{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: var(--navheight);
+        max-width: 1200px;
+        margin: 0 auto;
+        border: var(--border);
+        z-index: 100;
+        padding: 0 var(--mob-pad) 0 var(--mob-pad);
+}
+.NavigationBar__ a{
+        text-transform: uppercase;
+        font-size: 1.02rem;
+        font-weight: 300;
+}
+.BookNow{
+        padding: 0.5rem 1.5rem;
+        background-color: var(--clr-06);
+        border-radius: 20px;
+}
+.NavigationBar__ ul{
+        display: flex;
+        padding: 0;
+        margin: 0 0 0 auto;
+}
+
+.NavigationBar__ ul li{
+        display: flex;
+        padding: 0 0 0 clamp(0.7rem, -7.1000rem + 20.8000vw, 2rem);
+}
+.NavigationBar__ ul li:nth-child(1){ order: 1; }
+.NavigationBar__ ul li:nth-child(2){ order: 2; }
+.NavigationBar__ ul li:nth-child(3){ order: 3; }
+.NavigationBar__ ul li:nth-child(4){ order: 4; }
+.NavigationBar__ ul li:nth-child(5){ order: 5; }
+
+.logo{
+        display: flex;
+        height: 6rem;
+        width: 10rem;
+        opacity: 0.9;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;      
+        background-image: url('../public/img/StyleBjonasLogoFei.png');
+        margin: 0 auto 0 0;
+}
+.menu__toggle {
+        opacity: 1;
+        display: none;
+        position: absolute;
+}
+/* Responsive Hamburguer */
+@media (max-width: 600px) {
+        .logo{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                display: flex;
+                align-self: center;
+                height: 6vh;
+
+                /* background-color: #0070f3; */
+                margin: auto;
+        }
+        .NavigationBar__{
+                display: flex;
+                height: 9vh;
+                top: 0;
+                right: 0;
+                left: 0;
+                border: var(--border);
+        }
+        .NavigationBarItems{
+                display: none;
+                flex-direction: column;
+                justify-content: space-evenly;
+                width: 100%;
+                visibility: hidden;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.85);
+        }
+        .NavigationBar__ ul{
+                padding: 3rem;
+        }
+        /* Hamburguer Menu */
+        .menu__toggle:checked ~ .menu__btn > span {
+                transform: rotate(45deg);
+        }
+        .menu__toggle:checked ~ .menu__btn > span::before {
+                top: 0;
+                transform: rotate(0);
+        }
+        .menu__toggle:checked ~ .menu__btn > span::after {
+                top: 0;
+                transform: rotate(90deg);
+        }
+        .menu__toggle:checked ~ .NavigationBarItems{
+                visibility: visible;
+        }
+        .menu__toggle:checked ~ .NavigationBar__{
+                display: block;
+        }
+        .NavigationBar__ ul li:nth-child(5){ order: 5;  visibility: hidden;  }
+
+        .menu__btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: fixed;
+                top: .5rem;
+                left: .5rem;
+
+                width: 2.5rem;
+                height: 2.5rem;
+
+                cursor: pointer;
+                z-index: 1;
+                background-color: rgba(2, 81, 89);
+                border-radius: 6px;
+        }
+
+        .menu__btn > span,
+        .menu__btn > span::before,
+        .menu__btn > span::after {
+                display: block;
+                position: absolute;
+
+                margin: auto;
+                width: 80%;
+                height: 2px;
+
+                background-color: rgba(255, 255, 255);
+
+                transition-duration: .25s;
+        }
+        .menu__btn > span::before {
+                content: '';
+                width: 100%;
+                top: -8.9px;
+        }
+        .menu__btn > span::after {
+                content: '';
+                width: 100%;
+                top: 8.9px;
+        }
+}
+      
