@@ -24,7 +24,7 @@ function mainSection(props) {
             }
     }, []);
 
-    return <section ref={mainSectionRef} setmainWidth={props.setmainwidth(mainWidth)} setmainComponentWidth={props.setmainComponentWidth(mainComponentWidth)} className={props.className ? props.className:style.MainSection__ }>{props.children}</section>
+    return <section ref={mainSectionRef} setmainWidth={props.setmainWidth(mainWidth)} setmainComponentWidth={props.setmainComponentWidth(mainComponentWidth)} className={props.className ? props.className:style.MainSection__ }>{props.children}</section>
 }
 // const mainSection = React.forwardRef((props, ref) => (
 //     <section ref={ref} className={style.MainSection__}>{props.children}</section>

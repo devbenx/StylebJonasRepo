@@ -48,8 +48,8 @@ export default function Home() {
   return (
     <div ref={containerRef} className={styles.container}>
       <NavigationBar />
-      <SideContent scrolly={scrollY} containerheight={containerHeight} mainwidth={mainWidth} maincomponentwidth={mainComponentWidth}></SideContent>
-      <MainSection setmainwidth={setmainWidth} setmainComponentWidth={setmainComponentWidth}>
+      <SideContent scrollY={scrollY} containerHeight={containerHeight} mainWidth={mainWidth} mainComponentWidth={mainComponentWidth}></SideContent>
+      <MainSection setmainWidth={setmainWidth} setmainComponentWidth={setmainComponentWidth}>
         <section className={styles.HomeMainSection}>
           <article className={styles.GifHomeMainSection}></article>
           <article className={styles.IntroSpeechHomeMainSection}>

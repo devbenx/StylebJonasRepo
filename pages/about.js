@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import about from '../styles/About.module.css'
 
@@ -28,14 +27,14 @@ export default function About() {
     <div className={styles.container}>
       <NavigationBar />
       <MainSection className={styles.MainSection} setmainWidth={setmainWidth} setmainComponentWidth={setmainComponentWidth}>
-        <section class={about.Aboutme}>
-                <article class={about.presentation_card}>
-                  <div class={about.presentation_img}></div>
+        <section className={about.Aboutme}>
+                <article className={about.presentation_card}>
+                  <div className={about.presentation_img}></div>
                   <h3>Jonas Bedoya</h3>
                   <p>Colorist & Hair Stylist</p>
                   <p>+15 years of experience</p>
                 </article>
-                <article class={about.readmore}>
+                <article className={about.readmore}>
                   <h3>Your Local Hairdresser</h3>
                   <p>15 years ago I started my journey in the hair and beauty industry in the city of Barcelona and,
                       for the last 3 years I have been working in Amsterdam.</p>
@@ -47,7 +46,7 @@ export default function About() {
                       treatment.</p>
                 </article>
         </section>
-        <section class={about.StudioSalon}>
+        <section className={about.StudioSalon}>
           <Swiper
             modules={[ Pagination, A11y, EffectFade]}
             effect="fade"
@@ -63,19 +62,19 @@ export default function About() {
             <SwiperSlide><img src="/img/swiper/salon4.jpg" alt="salon"/></SwiperSlide>
             <SwiperSlide><img src="/img/swiper/salon5.jpg" alt="salon"/></SwiperSlide>
           </Swiper>
-          <article class={about.PrivateStudio}>
+          <article className={about.PrivateStudio}>
                       <h3>Private Studio</h3>
                       <p>At the salon you can expect a private space where you are the center of attention. A calm and
                           relaxing ambient that create a unique experience. A drink of your choice.</p>
           </article>
         </section>
-        <section class={about.SustainableBeauty}>
+        <section className={about.SustainableBeauty}>
           <h1>Sustainable beauty</h1>
-          <section class={about.SustainableBeautyItems}>
+          <section className={about.SustainableBeautyItems}>
             <p>During my treatment I use <Link href="/contact"><a>Davines</a></Link> line of products that will make your hair stronger, adding volume and sleekness.
             My priority during my sevices is taking care of the prodcuts that I use to minimize damage to the folicule, that's why I partnered with Davines, the best line of products, that no only takes care of the planet but also gives good quality.</p>
-            <div class={about.SustainableBeautyItem}></div>
-            <div class={about.SustainableBeautyItem}></div>
+            <div className={about.SustainableBeautyItem}></div>
+            <div className={about.SustainableBeautyItem}></div>
           </section>
         </section>
       </MainSection>

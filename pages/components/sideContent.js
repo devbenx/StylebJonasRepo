@@ -6,7 +6,7 @@ export default function SideContent(props) {
 
 return (
         <section className={style.SideContent}>
-                <section style={{ width: props.maincomponentwidth, opacity: 0.9 - (props.scrolly / props.containerheight) * 1.1 }} className={style.ScrollDown} >
+                <section style={{ width: props.mainComponentWidth, opacity: 0.9 - (props.scrollY / props.containerHeight) * 1.1 }} className={style.ScrollDown} >
                         <h3>SCROLL DOWN</h3>
                         <div className={style.line}></div>
                 </section>

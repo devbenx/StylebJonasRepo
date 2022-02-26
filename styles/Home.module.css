@@ -19,8 +19,8 @@
   bottom: 0;
   margin: auto;
   display: flex;
-  height: min(60vw, 60vh);
-  width: min(60vw, 60vh);
+  height: min(60vw, 60vh, 20rem);
+  width: min(60vw, 60vh, 20rem);
   background-size: 400%;
   background-position: 0%;
   background-repeat: no-repeat;
@@ -31,8 +31,8 @@
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: contain;
-  -webkit-mask-image: url('../public/img/StyleBjonasLogoFei.png');
-  mask-image: url('../public/img/StyleBjonasLogoFei.png');
+  -webkit-mask-image: url('/img/StyleBjonasLogoFei.png');
+  mask-image: url('/img/StyleBjonasLogoFei.png');
   z-index: 10;
   animation: opac 2.5s ease-in;
 }
@@ -64,9 +64,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  max-width: 100vw;
+  max-height: min(100vw, 30rem);
+  max-width: min(100vw, 30rem);
   margin: auto;
-  border: min(1.5vw, 0.5rem) solid rgba(255, 255, 255, 0.4);
+  border: min(1.5vw, 0.2rem) solid rgba(255, 255, 255, 0.4);
   opacity: 1;
   border-radius: 50%;
   animation: ldsripple 1.25s cubic-bezier(0, 0.2, 0.8, 1) infinite;
@@ -76,8 +77,8 @@
 }
 @keyframes ldsripple {
   0% {
-    width: min(60vw, 60vh);
-    height: min(60vw, 60vh);
+    width: min(60vw, 60vh, 20rem);
+    height: min(60vw, 60vh, 20rem);
     opacity: 0;
   }
   50% {
@@ -85,8 +86,8 @@
   }
 
   100% {
-    width: min(100vw, 100vh);
-    height: min(100vw, 100vh);
+    width: min(100vw, 100vh, 30rem);
+    height: min(100vw, 100vh, 30rem);
     opacity: 0;
   }
 }
@@ -135,7 +136,7 @@
   /* background-color: rgba(0, 0, 0, 0.4); */
 }
 .SideSocialItem:nth-of-type(3){
-  background-image: url('../public/img/svg/instagram.svg');
+  background-image: url('/img/svg/instagram.svg');
 }
 .SideSocialItem:hover:before{
   display:inline-block;
@@ -152,7 +153,7 @@
   content: 'Instagram';
 }
 .SideSocialItem:nth-of-type(2){
-  background-image: url('../public/img/svg/whatsapp.svg');
+  background-image: url('/img/svg/whatsapp.svg');
 }
 .SideSocialItem:nth-of-type(2):hover:before{
   content: 'WhatsApp';
@@ -174,7 +175,7 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 2%;
+  padding: 1% var(--mob-pad) var(--mob-pad) var(--mob-pad);
   /* background-color: rgba(0, 0, 0, 0.277); */
 
   position: absolute;
@@ -232,7 +233,7 @@
 }
 .GifHomeMainSection{
   height: auto;
-  background-image: url('../public/img/IntroGif.gif');
+  /* background-image: url('/img/IntroGif.gif'); */
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -448,7 +449,7 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url('../public/img/svg/instagram.svg');
+  background-image: url('/img/svg/instagram.svg');
 
 }
 .treatwell_link{
@@ -558,9 +559,9 @@
   min-height: 9rem;
   border-radius: 30px;
 }
-.card:nth-child(1) .card_img{  background-image: url('../public/img/svg/servhaircut.svg');}
-.card:nth-child(2) .card_img{  background-image: url('../public/img/svg/servtreatments.svg');}
-.card:nth-child(3) .card_img{  background-image: url('../public/img/svg/servcolor.svg');}
+.card:nth-child(1) .card_img{  background-image: url('/img/svg/servhaircut.svg');}
+.card:nth-child(2) .card_img{  background-image: url('/img/svg/servtreatments.svg');}
+.card:nth-child(3) .card_img{  background-image: url('/img/svg/servcolor.svg');}
 .Services article{
   display: flex;
   flex-direction: column;
@@ -777,40 +778,40 @@
   margin-bottom: 8px;
 }
 .portfolio_columflexgrid:nth-child(1) .portfolio_img:nth-child(1){
-  background-image: url('../public/img/portfolio/prt06.jpg');
+  background-image: url('/img/portfolio/prt06.jpg');
 }
 .portfolio_columflexgrid:nth-child(1) .portfolio_img:nth-child(2){
-  background-image: url('../public/img/portfolio/prtu05.jpg');
+  background-image: url('/img/portfolio/prtu05.jpg');
 }
 .portfolio_columflexgrid:nth-child(2) .portfolio_img:nth-child(1){
-  background-image: url('../public/img/portfolio/prtu06.jpg');
+  background-image: url('/img/portfolio/prtu06.jpg');
 }
 .portfolio_columflexgrid:nth-child(2) .portfolio_img:nth-child(2){
-  background-image: url('../public/img/portfolio/prt04.jpg');
+  background-image: url('/img/portfolio/prt04.jpg');
 }
 .portfolio_columflexgrid:nth-child(3) .portfolio_img:nth-child(1){
-  background-image: url('../public/img/portfolio/prt05.jpg');
+  background-image: url('/img/portfolio/prt05.jpg');
 }
 .portfolio_columflexgrid:nth-child(3) .portfolio_img:nth-child(2){
-  background-image: url('../public/img/portfolio/prtu01.jpg');
+  background-image: url('/img/portfolio/prtu01.jpg');
 }
 .portfolio_columflexgrid:nth-child(4) .portfolio_img:nth-child(1){
-  background-image: url('../public/img/portfolio/prtu02.jpg');
+  background-image: url('/img/portfolio/prtu02.jpg');
 }
 .portfolio_columflexgrid:nth-child(4) .portfolio_img:nth-child(2){
-  background-image: url('../public/img/portfolio/prtu03.jpg');
+  background-image: url('/img/portfolio/prtu03.jpg');
 }
 .portfolio_columflexgrid:nth-child(5) .portfolio_img:nth-child(1){
-  background-image: url('../public/img/portfolio/prtu04.jpg');
+  background-image: url('/img/portfolio/prtu04.jpg');
 }
 .portfolio_columflexgrid:nth-child(5) .portfolio_img:nth-child(2){
-  background-image: url('../public/img/portfolio/prt02.jpg');
+  background-image: url('/img/portfolio/prt02.jpg');
 }
 .portfolio_columflexgrid:nth-child(6) .portfolio_img:nth-child(1){
-  background-image: url('../public/img/portfolio/prt03.jpg');
+  background-image: url('/img/portfolio/prt03.jpg');
 }
 .portfolio_columflexgrid:nth-child(6) .portfolio_img:nth-child(2){
-  background-image: url('../public/img/portfolio/prt01.jpg');
+  background-image: url('/img/portfolio/prt01.jpg');
 }
 
 @media (max-width: 600px) {
@@ -896,16 +897,16 @@
   margin-bottom: 3%;
 }
 .promotions_card:nth-child(1) .promotions_card_img{
-  background-image: url('../public/img/svg/promomen.svg');
+  background-image: url('/img/svg/promomen.svg');
 }
 .promotions_card:nth-child(2) .promotions_card_img{
-  background-image: url('../public/img/svg/promobalayage.svg');
+  background-image: url('/img/svg/promobalayage.svg');
 }
 .promotions_card:nth-child(3) .promotions_card_img{
-  background-image: url('../public/img/svg/promorehab.svg');
+  background-image: url('/img/svg/promorehab.svg');
 }
 .promotions_card:nth-child(4) .promotions_card_img{
-  background-image: url('../public/img/svg/promokeratina.svg');
+  background-image: url('/img/svg/promokeratina.svg');
 }
 @media (max-width: 600px) {
   .Promotions{

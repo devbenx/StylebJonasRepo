@@ -28,7 +28,7 @@
         margin-bottom: 0;
 }
 .presentation_img{
-        background-image: url('../public/img/portfolio/jonasport.jpg');
+        background-image: url('/img/portfolio/jonasport.jpg');
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center 15%;
@@ -178,17 +178,17 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        background-image: url('../public/img/svg/instagram.svg');
+        background-image: url('/img/svg/instagram.svg');
 }
 .SustainableBeautyItem:nth-child(3){
         width: 5rem;
         height: 8rem;
-        background-image: url('../public/img/svg/b-cert.svg');
+        background-image: url('/img/svg/b-cert.svg');
 }
 .SustainableBeautyItem:nth-child(2){
         width: 10rem;
         height: 6rem;
-        background-image: url('../public/img/svg/davines.svg');
+        background-image: url('/img/svg/davines.svg');
 }
 .SustainableBeautyItems p{
         padding-right: 4%;
