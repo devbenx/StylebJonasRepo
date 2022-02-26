@@ -10,13 +10,12 @@ import Footer from './components/footer'
 import { Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade } from 'swiper';
-import Image from 'next/image'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import Link from 'next/link'
 
 export default function About() {
@@ -71,8 +70,7 @@ export default function About() {
         <section className={about.SustainableBeauty}>
           <h1>Sustainable beauty</h1>
           <section className={about.SustainableBeautyItems}>
-            <p>During my treatment I use <Link href="/contact"><a>Davines</a></Link> line of products that will make your hair stronger, adding volume and sleekness.
-            My priority during my sevices is taking care of the prodcuts that I use to minimize damage to the folicule, that is why I partnered with Davines, the best line of products, that no only takes care of the planet but also gives good quality.</p>
+            <p>During my treatment I use <Link href="/contact"><a>Davines</a></Link> line of products that will make your hair stronger, adding volume and sleekness. My priority during my sevices is taking care of the prodcuts that I use to minimize damage to the folicule, that is why I partnered with Davines, the best line of products, that no only takes care of the planet but also gives good quality.</p>
             <div className={about.SustainableBeautyItem}></div>
             <div className={about.SustainableBeautyItem}></div>
           </section>
