@@ -1,5 +1,5 @@
 import style from '../../styles/Home.module.css'
-import React, { Component } from 'react';
+import React from 'react';
 import { useState, useEffect, useRef } from 'react';
 
 function mainSection(props) {

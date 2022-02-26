@@ -72,7 +72,7 @@ export default function About() {
           <h1>Sustainable beauty</h1>
           <section className={about.SustainableBeautyItems}>
             <p>During my treatment I use <Link href="/contact"><a>Davines</a></Link> line of products that will make your hair stronger, adding volume and sleekness.
-            My priority during my sevices is taking care of the prodcuts that I use to minimize damage to the folicule, that's why I partnered with Davines, the best line of products, that no only takes care of the planet but also gives good quality.</p>
+            My priority during my sevices is taking care of the prodcuts that I use to minimize damage to the folicule, that is why I partnered with Davines, the best line of products, that no only takes care of the planet but also gives good quality.</p>
             <div className={about.SustainableBeautyItem}></div>
             <div className={about.SustainableBeautyItem}></div>
           </section>
