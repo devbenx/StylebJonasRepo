@@ -15,14 +15,12 @@ import NavigationBar from './components/navigationBar'
 import Footer from './components/footer'
 
 // React
-import { useState, useEffect, useRef } from 'react';
-
-
+import React, { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
 
-  const [mainWidth, setmainWidth] = useState(0);
-  const [mainComponentWidth, setmainComponentWidth] = useState(0);
+  const [mainWidth, setMainWidth] = useState(0);
+  const [mainComponentWidth, setMainComponentWidth] = useState(0);
   const [scrollY, setScrollY] = useState(0);
   const [containerHeight, setContainerHeight] = useState(0);
   const containerRef = useRef(null);
@@ -32,11 +30,7 @@ export default function Home() {
       setScrollY(window.scrollY + 1);
       setContainerHeight(containerRef.current.offsetHeight);
     };
-    // just trigger this so that the initial state 
-    // is updated as soon as the component is mounted
-    // related: https://stackoverflow.com/a/63408216
     handleScroll();
-
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -49,7 +43,7 @@ export default function Home() {
     <div ref={containerRef} className={styles.container}>
       <NavigationBar />
       <SideContent scrollY={scrollY} containerHeight={containerHeight} mainWidth={mainWidth} mainComponentWidth={mainComponentWidth}></SideContent>
-      <MainSection setmainWidth={setmainWidth} setmainComponentWidth={setmainComponentWidth}>
+      <MainSection setmainWidth={setMainWidth} setmainComponentWidth={setMainComponentWidth}>
         <section className={styles.HomeMainSection}>
           <article className={styles.GifHomeMainSection}></article>
           <article className={styles.IntroSpeechHomeMainSection}>

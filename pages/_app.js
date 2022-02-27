@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Loading from './components/loading'
 import { motion } from 'framer-motion';
 
