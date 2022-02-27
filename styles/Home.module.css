@@ -233,7 +233,7 @@
 }
 .GifHomeMainSection{
   height: auto;
-  /* background-image: url('/img/IntroGif.gif'); */
+  background-image: url('/img/IntroGif.gif');
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
