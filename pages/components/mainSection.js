@@ -3,27 +3,30 @@ import React, { useState, useEffect, useRef } from 'react';
 
 function mainSection(props) {
     const mainSectionRef = useRef(null);
+    const [mainSectionRefWidth, setMainSectionRefWidth] = useState(0);
 
-    const [mainWidth, setMainWidth] = useState(0);
-    const [mainComponentWidth, setMainComponentWidth] = useState(0);
-  
     const handleResize = () => {
-            setMainWidth(window.innerWidth);
-            setMainComponentWidth(mainSectionRef.current.offsetLeft);
+        setMainSectionRefWidth(mainSectionRef.current.offsetLeft);
+        console.log(mainSectionRefWidth);
     }
+
     useEffect(() => {
-            // setmainWidth(window.innerWidth)
             if (typeof window !== "undefined") {
-                    setMainWidth(window.innerWidth)
-                    setMainComponentWidth(mainSectionRef.current.offsetLeft)
+                setMainSectionRefWidth(mainSectionRef.current.offsetLeft);
+                if(props.setMainComponentWidthChanger != null){
+                        props.setMainComponentWidthChanger(mainSectionRefWidth)
+                }
+                console.log(mainSectionRefWidth);
             }
-            window.addEventListener('resize', handleResize);
+            window.addEventListener('resize', handleResize)
             return () => {
                     window.removeEventListener('resize', handleResize)
             }
-    }, []);
+    }, [mainSectionRefWidth]);
 
-    return <section ref={mainSectionRef} setmainWidth={props.setmainWidth(mainWidth)} setmainComponentWidth={props.setmainComponentWidth(mainComponentWidth)} className={props.className ? props.className:style.MainSection__ }>{props.children}</section>
+    return <section ref={mainSectionRef} className={props.className ? props.className:style.MainSection__ }>
+        {props.children}
+    </section>
 }
 
 export default mainSection;

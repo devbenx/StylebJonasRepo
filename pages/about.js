@@ -25,7 +25,7 @@ export default function About() {
   return (
     <div className={styles.container}>
       <NavigationBar />
-      <MainSection className={styles.MainSection} setmainWidth={setmainWidth} setmainComponentWidth={setmainComponentWidth}>
+      <MainSection className={styles.MainSection}>
         <section className={about.Aboutme}>
                 <article className={about.presentation_card}>
                   <div className={about.presentation_img}></div>
@@ -73,7 +73,7 @@ export default function About() {
             <p>During my treatment I use <Link href="/contact"><a>Davines</a></Link> line of products that will make your hair stronger, adding volume and sleekness. My priority during my sevices is taking care of the prodcuts that I use to minimize damage to the folicule, that is why I partnered with Davines, the best line of products, that no only takes care of the planet but also gives good quality.</p>
             <div className={about.SustainableBeautyItem}></div>
             <div className={about.SustainableBeautyItem}></div>
-          </section>
+          </section> 
         </section>
       </MainSection>
       <Footer />

@@ -17,9 +17,7 @@ import Footer from './components/footer'
 // React
 import React, { useState, useEffect, useRef } from 'react';
 
-export default function Home() {
-
-  const [mainWidth, setMainWidth] = useState(0);
+export default function Home( props ) {
   const [mainComponentWidth, setMainComponentWidth] = useState(0);
   const [scrollY, setScrollY] = useState(0);
   const [containerHeight, setContainerHeight] = useState(0);
@@ -31,19 +29,19 @@ export default function Home() {
       setContainerHeight(containerRef.current.offsetHeight);
     };
     handleScroll();
+    console.log("mainComponentWidth: "+mainComponentWidth);
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, [scrollY, mainComponentWidth]);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <div ref={containerRef} className={styles.container}>
       <NavigationBar />
-      <SideContent scrollY={scrollY} containerHeight={containerHeight} mainWidth={mainWidth} mainComponentWidth={mainComponentWidth}></SideContent>
-      <MainSection setmainWidth={setMainWidth} setmainComponentWidth={setMainComponentWidth}>
+      <SideContent scrollY={scrollY} containerHeight={containerHeight} mainComponentWidth={mainComponentWidth}></SideContent>
+      <MainSection setMainComponentWidthChanger={setMainComponentWidth}>
         <section className={styles.HomeMainSection}>
           <article className={styles.GifHomeMainSection}></article>
           <article className={styles.IntroSpeechHomeMainSection}>

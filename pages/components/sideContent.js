@@ -1,6 +1,4 @@
 import style from '../../styles/Home.module.css'
-import { useState, useEffect, useRef } from 'react';
-
 
 export default function SideContent(props) {
 
