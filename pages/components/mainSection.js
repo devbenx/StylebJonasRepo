@@ -1,9 +1,9 @@
 import style from '../../styles/Home.module.css'
 import React, { useState, useEffect, useRef } from 'react';
 
-function mainSection(props) {
-    const mainSectionRef = useRef(null);
-    const [mainSectionRefWidth, setMainSectionRefWidth] = useState(0);
+function mainSection( props ) {
+    const mainSectionRef = React.useRef(null);
+    const [mainSectionRefWidth, setMainSectionRefWidth] = React.useState(0);
 
     const handleResize = () => {
         setMainSectionRefWidth(mainSectionRef.current.offsetLeft);

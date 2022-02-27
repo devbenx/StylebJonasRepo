@@ -19,8 +19,8 @@ import { useState } from 'react';
 import Link from 'next/link'
 
 export default function About() {
-  const [mainWidth, setmainWidth] = useState(0);
-  const [mainComponentWidth, setmainComponentWidth] = useState(0);
+  // const [mainWidth, setmainWidth] = useState(0);
+  // const [mainComponentWidth, setmainComponentWidth] = useState(0);
 
   return (
     <div className={styles.container}>
