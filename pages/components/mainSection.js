@@ -1,7 +1,7 @@
 import style from '../../styles/Home.module.css'
 import React, { useState, useEffect, useRef } from 'react';
 
-function mainSection( props ) {
+function MainSection( props ) {
 
         const [mainSectionRefWidth, setMainSectionRefWidth] = useState(0)
         const mainSectionRef = useRef(null)
@@ -26,7 +26,7 @@ function mainSection( props ) {
                 return () => {
                         window.removeEventListener('resize', handleResize)
                 }
-                
+
         }, [mainSectionRefWidth]);
 
     return <section ref={mainSectionRef} className={props.className ? props.className:style.MainSection__ }>
@@ -34,4 +34,4 @@ function mainSection( props ) {
     </section>
 }
 
-export default mainSection;
+export default MainSection;
