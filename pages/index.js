@@ -18,10 +18,10 @@ import Footer from './components/footer'
 import React, { useState, useEffect, useRef } from 'react';
 
 export default function Home( props ) {
-  const [mainComponentWidth, setMainComponentWidth] = useState(0);
-  const [scrollY, setScrollY] = useState(0);
-  const [containerHeight, setContainerHeight] = useState(0);
-  const containerRef = useRef(null);
+  const [mainComponentWidth, setMainComponentWidth] = useState(0)
+  const [scrollY, setScrollY] = useState(0)
+  const [containerHeight, setContainerHeight] = useState(0)
+  const containerRef = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
