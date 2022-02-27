@@ -31,7 +31,7 @@
         height: auto;
         padding: 0.8rem;
         border-radius: 15px;
-        background-color: var(--clr-01);
+        background-color: var(--clr-02);
         /* border: 1px solid rgba(133, 133, 133, 0.1); */
         margin-left: 1rem;
 }
@@ -58,14 +58,14 @@
         font-weight: 300;
         letter-spacing: 0px;
         text-transform: none;
-        background-color: rgba(174, 174, 174, 0.07);
+        background-color: rgba(99, 198, 183, 0.07);
 }
 .ListPrices p{
         color: rgba(255, 255, 255, 0.9);
         font-size: clamp(1rem, 0.8680rem + 0.4800vw, 1.1rem);
         font-style: italic !important;
         font-weight: 100;
-        background-color: rgba(174, 174, 174, 0.07);
+        background-color: rgba(99, 198, 183, 0.07);
         line-height: 1;
         padding: 0.35rem 0 0.35rem 1rem;
         margin: 0 0 1rem 0;

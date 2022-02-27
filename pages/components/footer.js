@@ -5,7 +5,7 @@ function footer(props) {
     return <section className={style.Footer__}>
                 <section className={style.Footer}>
                         <section className={style.FooterSpeech}>
-                                <h1>STYLE B JONAS</h1>
+                                <h1>STYLEBJONAS</h1>
                                 <p>Can’t wait to welcome you into my studio where you can relax and enjoy your well-deserved treatment.</p>
                         </section>
                         <section className={style.SocialSection}>
