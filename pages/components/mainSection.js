@@ -4,18 +4,18 @@ import React, { useState, useEffect, useRef } from 'react';
 function mainSection(props) {
     const mainSectionRef = useRef(null);
 
-    const [mainWidth, setmainWidth] = useState(0);
-    const [mainComponentWidth, setmainComponentWidth] = useState(0);
+    const [mainWidth, setMainWidth] = useState(0);
+    const [mainComponentWidth, setMainComponentWidth] = useState(0);
   
     const handleResize = () => {
-            setmainWidth(window.innerWidth);
-            setmainComponentWidth(mainSectionRef.current.offsetLeft);
+            setMainWidth(window.innerWidth);
+            setMainComponentWidth(mainSectionRef.current.offsetLeft);
     }
     useEffect(() => {
             // setmainWidth(window.innerWidth)
             if (typeof window !== "undefined") {
-                    setmainWidth(window.innerWidth)
-                    setmainComponentWidth(mainSectionRef.current.offsetLeft)
+                    setMainWidth(window.innerWidth)
+                    setMainComponentWidth(mainSectionRef.current.offsetLeft)
             }
             window.addEventListener('resize', handleResize);
             return () => {
