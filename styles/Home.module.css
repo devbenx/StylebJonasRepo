@@ -233,11 +233,11 @@
 }
 .GifHomeMainSection{
   height: auto;
-  background-image: url('/img/IntroGif.gif');
+  background-image: url('/img/shorterIntro.gif');
   background-position: center;
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.7;
+  opacity: 0.75;
   min-width: 50%;
   border-top-left-radius: 17rem;
   border-bottom-right-radius: 17rem;
