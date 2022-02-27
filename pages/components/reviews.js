@@ -12,7 +12,7 @@ function Reviews(props) {
                                         <p>★★★★★</p>
                                 </article>
                                 <article className={style.reviews_testimonials}>
-                                        <h3>Men's Haircut</h3>
+                                        <h3>Men Haircut</h3>
                                         <p>Very good haircut! Jonas understood exactly what
                                         I came for, and the atmosphere in his studio
                                         was very relaxed</p>
@@ -21,7 +21,7 @@ function Reviews(props) {
                         </section>
                         <section className={style.reviews_columflexgrid}>
                                 <article className={style.reviews_testimonials}>
-                                        <h3>Men's Haircut</h3>
+                                        <h3>Men Haircut</h3>
                                         <p>Very relaxed and comfortable atmosphere. I felt
                                         very at ease and Jonas did a great job!</p>
                                         <p>★★★★★</p>

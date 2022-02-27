@@ -53,7 +53,7 @@ function Services(props) {
                                         <p>45e 45min</p>
                                         <h3>Hairmask</h3>
                                         <p>10e 15min</p>
-                                        <h3>Men's Season Special</h3>
+                                        <h3>Men Season Special</h3>
                                         <p>49e 1hr 15min 
                                         Includes: Haircut, Mini facial & Scalp massage</p>
                                 </section>
