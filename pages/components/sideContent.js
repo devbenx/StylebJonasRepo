@@ -12,8 +12,8 @@ return (
                 <section style={{ width: props.mainComponentWidth, opacity: 0.9 - (props.scrollY / props.containerHeight) * 1.1}} className={style.SideSocials}>
                         <h3>FOLLOW MY WORK</h3>
                         <div className={style.line}></div>
-                        <Link href="//www.instagram.com/stylebjonas/?hl=en"><a><div className={style.SideSocialItem}></div></a></Link>
-                        <Link href="//www.instagram.com/stylebjonas/?hl=en"><a><div className={style.SideSocialItem}></div></a></Link>
+                        <Link href="//www.instagram.com/stylebjonas/?hl=en"><a><div className={style.SideSocialItemInstagram}></div></a></Link>
+                        <Link href="//www.instagram.com/stylebjonas/?hl=en"><a><div className={style.SideSocialItemWhatsApp}></div></a></Link>
                 </section>
         </section>
 )}
