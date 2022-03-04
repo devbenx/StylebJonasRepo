@@ -13,6 +13,7 @@ import Promotions from './components/promotions'
 import SideContent from './components/sideContent'
 import NavigationBar from './components/navigationBar'
 import Footer from './components/footer'
+import Image from 'next/image'
 
 // React
 import React, { useState, useEffect, useRef } from 'react';
@@ -39,11 +40,23 @@ export default function Home( props ) {
 
   return (
     <div ref={containerRef} className={styles.container}>
+      <Head>
+        <title>StyleBjonas</title>
+        <link rel="icon" href="/StylebjonasIcon.ico" />
+      </Head>
       <NavigationBar />
       <SideContent scrollY={scrollY} containerHeight={containerHeight} mainComponentWidth={mainComponentWidth}></SideContent>
       <MainSection setMainComponentWidthChanger={setMainComponentWidth}>
         <section className={styles.HomeMainSection}>
-          <article className={styles.GifHomeMainSection}></article>
+          <article className={styles.GifHomeMainSection}>
+            <Image
+              src="/img/shorterIntro.gif"
+              alt="Hair"
+              layout="fill"
+              placeholder="blur"
+              blurDataURL="/img/shorterIntro.gif"
+              className={styles.GifHomeMainSectionImgSettings}/>
+          </article>
           <article className={styles.IntroSpeechHomeMainSection}>
             <section className={styles.IntroSpeechHomeMainSectionTitle}>
               <h3>Hair Stylist &</h3>
@@ -52,7 +65,7 @@ export default function Home( props ) {
             <p>Hairdressing is not just about cutting and coloring your hair. I have a passion for hairstyling and the artistry that comes with it.</p>
             <section className={styles.IntroSpeechHomeMainSectionActions}>
               <Link href="/contact"><a>Make an Appointment</a></Link>
-              <Link href="/contact"><a>Check my work</a></Link>
+              <Link href="/#Portfolio"><a>Check my work</a></Link>
             </section>
           </article>
         </section>

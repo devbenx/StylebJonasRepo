@@ -1,7 +1,7 @@
 import style from '../../styles/Home.module.css'
 
 function Portfolio(props) {
-        return <section className={style.Portfolio}>
+        return <section id='Portfolio' className={style.Portfolio}>
                 <h1>Portfolio</h1>
                 <section className={style.portfolio_wrapper}>
                         <article className={style.portfolio_columflexgrid}>

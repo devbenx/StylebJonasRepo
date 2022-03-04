@@ -116,7 +116,7 @@
   align-self: center;
 }
 .line{
-  width: 1.5px;
+  width: 1.1px;
   height: 5rem;
   background-color: rgba(255, 255, 255, 0.7);
   align-self: center;
@@ -248,6 +248,10 @@
   right: 2%;
   bottom: 2%;
   z-index: 1;
+  overflow: hidden;
+}
+.GifHomeMainSectionImgSettings{
+  object-fit: cover;
 }
 @media (max-width: 900px) {
   .IntroSpeechHomeMainSectionActions{
@@ -321,7 +325,7 @@
     display: flex;
     margin: 0 0 auto 0;
 
-    position: static;
+    position: relative;
     left: 0;
     right: 0;
     bottom: auto;
@@ -420,10 +424,13 @@
   flex-direction: column;
   margin: auto;
 }
-.SocialSection section{
+.SocialSection section, .SocialSection p{
   display: flex;
   margin: auto;
   margin: auto auto 1rem;
+}
+.Copyright{
+  font-size: 0.9rem;
 }
 .mapsLink{
   color: rgba(255, 255, 255, 0.85);
