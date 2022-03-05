@@ -113,7 +113,7 @@ function Services(props) {
                 <div
                         className={`${isChecked ? 'Scroll' : 'ScrollNot'}`}>
                         <div className={menuStyle.line}></div>
-                        <h3>Scroll right</h3>
+                        <h3>→</h3>
                 </div>
         </section>
 }
