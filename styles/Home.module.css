@@ -755,52 +755,52 @@
 }
 .portfolio_img{
   scroll-snap-align: start;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   height: 16rem;
-  border-radius: 8px;
+  width: auto;
   border: var(--border);
+  position: relative;
+}
+.portfolio_imgSettings{
+  object-fit: cover;
 }
 .portfolio_img:nth-child(1){
   margin-bottom: 8px;
 }
 .portfolio_columflexgrid:nth-child(1) .portfolio_img:nth-child(1){
-  background-image: url('/img/portfolio/prt06.jpg');
+  /* background-image: url('/img/portfolio/prt06.jpg'); */
 }
 .portfolio_columflexgrid:nth-child(1) .portfolio_img:nth-child(2){
-  background-image: url('/img/portfolio/prtu05.jpg');
+  /* background-image: url('/img/portfolio/prtu05.jpg'); */
 }
 .portfolio_columflexgrid:nth-child(2) .portfolio_img:nth-child(1){
-  background-image: url('/img/portfolio/prtu06.jpg');
+  /* background-image: url('/img/portfolio/prtu06.jpg'); */
 }
 .portfolio_columflexgrid:nth-child(2) .portfolio_img:nth-child(2){
-  background-image: url('/img/portfolio/prt04.jpg');
+  /* background-image: url('/img/portfolio/prt04.jpg'); */
 }
 .portfolio_columflexgrid:nth-child(3) .portfolio_img:nth-child(1){
-  background-image: url('/img/portfolio/prt05.jpg');
+  /* background-image: url('/img/portfolio/prt05.jpg'); */
 }
 .portfolio_columflexgrid:nth-child(3) .portfolio_img:nth-child(2){
-  background-image: url('/img/portfolio/prtu01.jpg');
+  /* background-image: url('/img/portfolio/prtu01.jpg'); */
 }
 .portfolio_columflexgrid:nth-child(4) .portfolio_img:nth-child(1){
-  background-image: url('/img/portfolio/prtu02.jpg');
+  /* background-image: url('/img/portfolio/prtu02.jpg'); */
 }
 .portfolio_columflexgrid:nth-child(4) .portfolio_img:nth-child(2){
-  background-image: url('/img/portfolio/prtu03.jpg');
+  /* background-image: url('/img/portfolio/prtu03.jpg'); */
 }
 .portfolio_columflexgrid:nth-child(5) .portfolio_img:nth-child(1){
-  background-image: url('/img/portfolio/prtu04.jpg');
+  /* background-image: url('/img/portfolio/prtu04.jpg'); */
 }
 .portfolio_columflexgrid:nth-child(5) .portfolio_img:nth-child(2){
-  background-image: url('/img/portfolio/prt02.jpg');
+  /* background-image: url('/img/portfolio/prt02.jpg'); */
 }
 .portfolio_columflexgrid:nth-child(6) .portfolio_img:nth-child(1){
-  background-image: url('/img/portfolio/prt03.jpg');
+  /* background-image: url('/img/portfolio/prt03.jpg'); */
 }
 .portfolio_columflexgrid:nth-child(6) .portfolio_img:nth-child(2){
-  background-image: url('/img/portfolio/prt01.jpg');
+  /* background-image: url('/img/portfolio/prt01.jpg'); */
 }
 
 @media (max-width: 600px) {
