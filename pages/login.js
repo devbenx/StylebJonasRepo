@@ -300,6 +300,7 @@ const Login = () => {
 return (
       <div>
             <h1>Services</h1>
+            {!db.isErrorEncountered && <p>error occurred</p>}
             {!db.isLoaded && <p>loading...</p>}
             <List>
                   <h2>Services</h2>

@@ -11,6 +11,8 @@ const useDatabase = ( database ) => {
 
       const [collectionNames, setCollectionNames] = useState(null);
 
+      const [isErrorEncountered, setIsErrorEncountered] = useState(false);
+
       const [isLoaded, setIsLoaded] = useState(false);
 
       const [refreshKey, setRefreshKey] = useState(0)
@@ -35,6 +37,7 @@ const useDatabase = ( database ) => {
                   .catch( error => {
                         // handle error
                         setIsLoaded(false)
+                        setIsErrorEncountered(true)
                         if (error) return console.log(error);
                   })
 
@@ -158,6 +161,7 @@ const useDatabase = ( database ) => {
             collectionNames, 
             renameCollection,
             isLoaded, 
+            isErrorEncountered,
             actions: { 
                   createCollection,
                   addPost,
