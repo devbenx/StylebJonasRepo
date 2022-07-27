@@ -11,7 +11,6 @@ function navigationBar(props) {
                         <span></span>
                 </label>
                 <Link href="/"><a><section className={navStyle.logo}></section></a></Link>
-                {/* <div className={navStyle.lilogo}><Link href="/"><a><div className={navStyle.logo}></div></a></Link></div> */}
                 <ul className={navStyle.NavigationBarItems}>
                         <li><Link href="/about"><a>About</a></Link></li>
                         <li><Link href="/#Services"><a>Services</a></Link></li>

@@ -81,3 +81,12 @@ export default function Home( props ) {
     </div>
   )
 }
+
+// export async function getServerSideProps(context) {
+// 		const res = await fetch('http://localhost:3000/api/database/services');
+// 		const services = await res.json();
+//             console.log(services.data.name)
+// 		return {
+// 		  props: { services },
+// 		};
+// }
