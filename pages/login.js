@@ -227,9 +227,7 @@ const EditSwitch = ({dbName, name}) => {
             </>)
 }
     
-const login = () => {
-
-      const router = useRouter()
+const Login = () => {
 
       const db = useDatabase('services') //change services for router
       
@@ -539,7 +537,7 @@ return (
   )
 }
 
-export default login
+export default Login
 
 const AccordionCategory = styled(Accordion)`
       background-color: #37474f;
