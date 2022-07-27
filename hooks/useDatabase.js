@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 // Custom hook for accessing Stylebjonas database | API => services
 const useDatabase = ( database ) => {
 
-      // const endPointDatabase = `/api/mongodb/database`
-      const endPointDatabase = `https://www.stylebjonas.com/api/mongodb/database`
+      const endPointDatabase = `/api/mongodb/database`
+      // const endPointDatabase = `https://www.stylebjonas.com/api/mongodb/database`
 
-      // const endPointCollection = `/api/mongodb/collection`
-      const endPointCollection = `https://www.stylebjonas.com/api/mongodb/collection`
+      const endPointCollection = `/api/mongodb/collection`
+      // const endPointCollection = `https://www.stylebjonas.com/api/mongodb/collection`
 
       const [collectionNames, setCollectionNames] = useState(null);
 
