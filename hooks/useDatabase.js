@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 // Custom hook for accessing Stylebjonas database | API => services
 const useDatabase = ( database ) => {
 
-      const endPointDatabase = `/api/mongodb/database`
+      const endPointDatabase = `/api/mongodb/${database}`
       // const endPointDatabase = `https://www.stylebjonas.com/api/mongodb/database`
 
-      const endPointCollection = `/api/mongodb/collection`
       // const endPointCollection = `https://www.stylebjonas.com/api/mongodb/collection`
 
       const [collectionNames, setCollectionNames] = useState(null);
@@ -56,6 +55,9 @@ const useDatabase = ( database ) => {
 
       const editPost = async (event, selectedOne) => {
             event.preventDefault();
+
+            const endPointCollection = `/api/mongodb/${database}/${event.target.category.value}`
+
             console.log('editing post...');
             console.log(event.target.category.value);
             console.log({selectedOne});
@@ -126,6 +128,8 @@ const useDatabase = ( database ) => {
       const addPost = async (event) => {
             event.preventDefault();
             console.log('adding post...');
+            
+            const endPointCollection = `/api/mongodb/${database}/${event.target.category.value}`
 
             const body = {
                   title:  event.target.title.value,
