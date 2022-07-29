@@ -330,7 +330,7 @@ return (
                               <ListItemText primary="Manage categories" />
                         </ListItemButton>
                   </ListItem>
-                  {db.isLoaded && db.collectionNames.map((collection, index)=>{
+                  {db.collectionNames && db.collectionNames.map((collection, index)=>{
                         return <TableX key={index} collectionName={collection} databaseName={db.databaseName} dispatch={dispatch} state={state} collectionNames={db.collectionNames} />
                   })}
             </List>   

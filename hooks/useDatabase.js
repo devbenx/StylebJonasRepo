@@ -12,6 +12,8 @@ const useDatabase = ( database ) => {
 
       const [collectionNames, setCollectionNames] = useState(null);
 
+      const [shouldFetch, setShouldFetch] = useState(true);
+
       const [isErrorEncountered, setIsErrorEncountered] = useState(false);
 
       const [isLoaded, setIsLoaded] = useState(false);
@@ -20,9 +22,12 @@ const useDatabase = ( database ) => {
 
       // useEffect(() => {
 
+      //       console.log({data})
+
+
       //       // getCollectionNames();
 
-      // }, [refreshKey])
+      // }, [data])
 
       // const getCollectionNames = async () => {
       //       const params = { params: { database: database } };
@@ -49,21 +54,23 @@ const useDatabase = ( database ) => {
       const params = { params: { database: database } };
 
       // const fetcher = url => fetch(url).then(r => r.json())
-      const fetcher = url => axios.get(url, params)                  
-            .then(response => {
-                  setCollectionNames(response.data.data)
-                  setIsLoaded(true)
-                  setIsErrorEncountered(false)
-                  return response.data.data
-            })
-            .catch( error => {
-                  // handle error
-                  setIsLoaded(false)
-                  setIsErrorEncountered(true)
-                  if (error) return console.log(error);
-            })
+      const fetcher = (url) => axios.get(url, params).then((res) => res.data.data);
 
-      const { data, error, mutate } = useSWR(endPointDatabase, fetcher);
+      // const fetcher = url => axios.get(url, params)                  
+      //       .then(response => {
+      //             // setCollectionNames(response.data.data)
+      //             // setIsLoaded(true)
+      //             // setIsErrorEncountered(false)
+      //             return response.data.data
+      //       })
+      //       .catch( error => {
+      //             // handle error
+      //             setIsLoaded(false)
+      //             setIsErrorEncountered(true)
+      //             if (error) return console.log(error);
+      //       })
+      
+      const { data, error, mutate, isValidating } = useSWR(endPointDatabase, fetcher);
 
 
       // const deletePost = async (id) => {
@@ -185,9 +192,9 @@ const useDatabase = ( database ) => {
 
             databaseName: database,
             insertOne,
-            collectionNames, 
+            collectionNames: data, 
             renameCollection,
-            isLoaded, 
+            isLoaded: isValidating, 
             isErrorEncountered,
             actions: { 
                   createCollection,
@@ -197,7 +204,8 @@ const useDatabase = ( database ) => {
             swr:{
                   data,
                   error,
-                  mutate
+                  mutate,
+                  isValidating
             }
       }
 }
