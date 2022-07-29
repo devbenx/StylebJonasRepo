@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import useSWR from "swr";
 
 // Custom hook for accessing Stylebjonas database | API => services
 const useDatabase = ( database ) => {
@@ -17,33 +18,53 @@ const useDatabase = ( database ) => {
 
       const [refreshKey, setRefreshKey] = useState(0)
 
-      useEffect(() => {
+      // useEffect(() => {
 
-            getCollectionNames();
+      //       // getCollectionNames();
 
-      }, [refreshKey])
+      // }, [refreshKey])
 
-      const getCollectionNames = async () => {
-            const params = { params: { database: database } };
-            const res = await axios.get(endPointDatabase, params)
-                  .then(response => {
+      // const getCollectionNames = async () => {
+      //       const params = { params: { database: database } };
+      //       const res = await axios.get(endPointDatabase, params)
+      //             .then(response => {
 
-                        setCollectionNames(response.data.data)
+      //                   setCollectionNames(response.data.data)
 
-                        setIsLoaded(true)
-                        setIsErrorEncountered(false)
+      //                   setIsLoaded(true)
+      //                   setIsErrorEncountered(false)
 
-                        return response.data.data
-                  })
-                  .catch( error => {
-                        // handle error
-                        setIsLoaded(false)
-                        setIsErrorEncountered(true)
-                        if (error) return console.log(error);
-                  })
+      //                   return response.data.data
+      //             })
+      //             .catch( error => {
+      //                   // handle error
+      //                   setIsLoaded(false)
+      //                   setIsErrorEncountered(true)
+      //                   if (error) return console.log(error);
+      //             })
 
-            return res
-      }
+      //       return res
+      // }
+
+      const params = { params: { database: database } };
+
+      // const fetcher = url => fetch(url).then(r => r.json())
+      const fetcher = url => axios.get(url, params)                  
+            .then(response => {
+                  setCollectionNames(response.data.data)
+                  setIsLoaded(true)
+                  setIsErrorEncountered(false)
+                  return response.data.data
+            })
+            .catch( error => {
+                  // handle error
+                  setIsLoaded(false)
+                  setIsErrorEncountered(true)
+                  if (error) return console.log(error);
+            })
+
+      const { data, error, mutate } = useSWR(endPointDatabase, fetcher);
+
 
       // const deletePost = async (id) => {
       //       console.log('deleting post...');
@@ -172,7 +193,12 @@ const useDatabase = ( database ) => {
                   createCollection,
                   addPost,
                   editPost,
-            } 
+            },
+            swr:{
+                  data,
+                  error,
+                  mutate
+            }
       }
 }
 
